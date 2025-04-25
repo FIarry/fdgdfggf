@@ -9,6 +9,18 @@
 </head>
 
 <body>
+    <div class="warningPopup hiddenDF" id="deleteFrame">
+        <div class="warningInner">
+            <h2 class="deleteTitle">Вы уверены что хотите <br> удалить фото?</h2>
+            <div class="imageContainerDelete" id="imageContainerDelete">
+                <img src="" alt="" class="displayImage">
+            </div>
+            <div class="buttons">
+                <button class="agree" id="deleteBtn">Удалить</button>
+                <button class="cancel" id="cancelBtn">Отмена</button>
+            </div>
+        </div>
+    </div>
     <div class="wrapper">
         <div class="formBackgroundWrapper" id="formDisplay">
             <div class="formContainer">

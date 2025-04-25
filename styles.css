@@ -12,7 +12,6 @@ body {
 
 .wrapper {
     min-height: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -60,6 +59,23 @@ body {
 .formIconBtn {
     width: 60%;
     height: 60%;
+}
+
+.galleryItemInner {
+    cursor: pointer;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.galleryItem:nth-child(even) .galleryItemInner {
+    cursor: pointer;
+    text-align: right;
+    align-items: end;
+}
+
+.galleryImage {
+    width: 50%;
 }
 
 @keyframes buttonHover {
@@ -123,6 +139,14 @@ body {
     left: -25%;
 }
 
+.title {
+    text-align: center;
+}
+
+.galleryContainer {
+    width: 50%;
+}
+
 form {
     display: flex;
     flex-direction: column;
@@ -152,11 +176,13 @@ form {
     from {
         width: 50%;
         height: 30%;
+        background-color: rgb(108, 145, 108);
     }
 
     to {
         width: 55%;
         height: 35%;
+        background-color: rgb(162, 190, 162);
     }
 }
 
@@ -164,16 +190,17 @@ form {
     from {
         width: 55%;
         height: 35%;
+        background-color: rgb(162, 190, 162);
     }
 
     to {
         width: 50%;
         height: 30%;
+        background-color: rgb(108, 145, 108);
     }
 }
 
 .input3 {
-    background-color: rgb(108, 145, 108);
     border: 0;
     color: white;
     width: 50%;
@@ -184,4 +211,67 @@ form {
 
 .input3:hover {
     animation: 0.3s linear 0s forwards 1 buttonHover2;
+}
+
+.warningPopup {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.346);
+    z-index: 10;
+}
+
+.warningInner {
+    background-color: rgb(82, 104, 82);
+    position: relative;
+    left: 37%;
+    top: 25%;
+    width: 25%;
+    height: 50%;
+    border-radius: 10%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+}
+
+.deleteTitle {
+    width: 100%;
+    text-align: center;
+}
+
+.displayImage {
+    height: 100%;
+    max-width: 100%;
+}
+
+.imageContainerDelete {
+    width: 90%;
+    height: 70%;
+    background-color: rgb(92, 106, 92);
+    display: flex;
+    justify-content: center;
+}
+
+.buttons {
+    margin-top: 2%;
+}
+
+.agree {
+    background-color: rgb(181, 54, 54);
+    color: white;
+    border: 0;
+    cursor: pointer;
+}
+
+.cancel {
+    background-color: rgb(179, 179, 179);
+    color: white;
+    border: 0;
+    cursor: pointer;
+}
+
+.hiddenDF {
+    display: none;
 }
